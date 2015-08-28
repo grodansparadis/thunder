@@ -1,0 +1,76 @@
+Return-Path: <gedsim@gmail.com>
+Delivered-To: akhe@eurosource.se
+X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on s405.loopia.se
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.2 required=6.0 tests=AWL,DKIM_SIGNED,DKIM_VALID,
+	DKIM_VALID_AU,RCVD_IN_DNSWL_LOW autolearn=disabled version=3.3.2
+Received: (qmail 53653 invoked by alias); 18 Mar 2014 11:44:32 -0000
+Delivered-To: akhe@grodansparadis.com
+Received: (qmail 53651 invoked from network); 18 Mar 2014 11:44:32 -0000
+Received: from unknown (HELO s423.loopia.se) ([194.9.94.67])
+          (envelope-sender <gedsim@gmail.com>)
+          by s326.loopia.se (qmail-ldap-1.03) with SMTP
+          for <akhe@grodansparadis.com>; 18 Mar 2014 11:44:32 -0000
+Received: from mail-wi0-f170.google.com (mail-wi0-f170.google.com [209.85.212.170])
+	by s423.loopia.se (Postfix) with ESMTP id E7FE0119AE58
+	for <akhe@grodansparadis.com>; Tue, 18 Mar 2014 12:44:31 +0100 (CET)
+Received: by mail-wi0-f170.google.com with SMTP id bs8so2499009wib.5
+        for <akhe@grodansparadis.com>; Tue, 18 Mar 2014 04:44:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=jO7tLKznUUfGAvUom/C8JEzv9rGWUgjvejlIN7cHVz8=;
+        b=Labkxv/VkaabALsUE/Wm6M/kal6ict6WWkVlOMUMRyPkdD7FBYyDsSG3Vjo8crGTBa
+         4KIeT5+HABWmhal4wCLAIQ5UCpOKLCNXVaSrxL/eNiVwEDnsomgYCdpEuL2dsOZjzdlv
+         d6iRIRWB0LtzHZ2sjGly/xkdOrwWykbmjNeodqDb67BL8jdi8iQBNsdB2hXG900lYtty
+         AMq8W2YgJ3yAUDjcyoLQdU44rG6XkaplgfTONoZEdd7ARQMCKJAd75Po/tx9SPOJTwWZ
+         y1KqPTICQbWy7cFukgFpBOVQ2bECgrm1rYLOmEkHDD7WKs8apTfwirZ7rSaxgkrpr4z9
+         VFLQ==
+X-Received: by 10.194.161.195 with SMTP id xu3mr23019027wjb.35.1395143071337;
+        Tue, 18 Mar 2014 04:44:31 -0700 (PDT)
+Received: from [192.168.101.90] (81-7-68-219.static.zebra.lt. [81.7.68.219])
+        by mx.google.com with ESMTPSA id g5sm46569647wjs.8.2014.03.18.04.44.30
+        for <akhe@grodansparadis.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 18 Mar 2014 04:44:30 -0700 (PDT)
+Message-ID: <5328318C.6040406@gmail.com>
+Date: Tue, 18 Mar 2014 13:44:12 +0200
+From: Gediminas Simanskis <gedsim@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Ake Hedman <akhe@grodansparadis.com>
+Subject: Re: Carambola2
+References: <53277B0A.5040107@grodansparadis.com>
+In-Reply-To: <53277B0A.5040107@grodansparadis.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi Ake,
+
+1.GPIO15 is boostrap pin.It must be pull down.
+http://8devices.com/media/files/Carambola2.pdf
+2. Reset pin33 is not connected anywhere? (if you will not use reset 
+button this pin can be left unconnected).
+3. If you will use internal antenna connector then you can lef antenna 
+pin unconnected.
+4.Block pins 50 and 51 with capacitors 0.1uF and 10uF.
+
+Gediminas
+
+
+> Hi Ged,
+>
+> I am planning to do a simple DIN mounted Carambola2 based board as of 
+> the attached schemas and using the attached antenna. Can you have a 
+> fast look at this schema and see if you can find any stupid faults.
+>
+> Also, to use the antenna connector instead of the chip antenna can the 
+> antenna output just be left open?
+>
+> Hope everything is well with you and that you enjoy work.
+>
+> Cheers
+> /Ake
+>
+
